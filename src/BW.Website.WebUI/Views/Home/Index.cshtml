@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<section class="space-y-4">
+    <div>
+        <h1 class="text-2xl font-semibold">Welcome to BW.Website</h1>
+        <p class="mt-1 text-sm app-text-muted">
+            This is a .NET MVC UI + Application + Infrastructure template with Tailwind 4 and Vue.js.
+        </p>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-3">
+        <div class="app-card p-4">
+            <h2 class="text-sm font-semibold">Application Layer</h2>
+            <p class="mt-1 text-xs app-text-muted">
+                CQRS, MediatR, FluentValidation, AutoMapper, and the SampleWorkOrder feature handlers.
+            </p>
+        </div>
+
+        <div class="app-card p-4">
+            <h2 class="text-sm font-semibold">Infrastructure</h2>
+            <p class="mt-1 text-xs app-text-muted">
+                EF Core (SQLite) with ApplicationDbContext and an EF-based SampleWorkOrder repository.
+            </p>
+        </div>
+
+        <div class="app-card p-4">
+            <h2 class="text-sm font-semibold">Web UI</h2>
+            <p class="mt-1 text-xs app-text-muted">
+                MVC layout using MVC Razor Views, Tailwind 4, Vue.js islands.
+            </p>
+        </div>
+    </div>
+</section>

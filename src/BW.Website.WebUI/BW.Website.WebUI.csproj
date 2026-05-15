@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BW.Website.Application\BW.Website.Application.csproj" />
+    <ProjectReference Include="..\BW.Website.Infrastructure\BW.Website.Infrastructure.csproj" />
+    <ProjectReference Include="..\BW.Website.Domain\BW.Website.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.18" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="WebInfrastructure\Authentication\" />
+    <Folder Include="WebInfrastructure\Authorization\" />
+    <Folder Include="WebInfrastructure\Extensions\" />
+    <Folder Include="WebInfrastructure\Logging\" />
+    <Folder Include="WebInfrastructure\TagHelpers\" />
+    <Folder Include="wwwroot\dist\" />
+    <Folder Include="wwwroot\images\icons\" />
+  </ItemGroup>
+</Project>
+

@@ -1,0 +1,17 @@
+﻿@{
+    var currentController = (ViewContext.RouteData.Values["controller"] as string) ?? "";
+    string LinkClass(string controller) =>
+        "inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-sm " +
+        (string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase)
+            ? "bg-brand text-white"
+            : "text-slate-600 hover:bg-slate-100 hover:text-slate-900");
+}
+
+<nav class="flex items-center gap-2">
+    <a asp-controller="Home" asp-action="Index" class="@LinkClass("Home")">
+        <span>Dashboard</span>
+    </a>
+    <a asp-controller="SampleWorkOrders" asp-action="Index" class="@LinkClass("SampleWorkOrders")">
+        <span>Sample Work Orders</span>
+    </a>
+</nav>

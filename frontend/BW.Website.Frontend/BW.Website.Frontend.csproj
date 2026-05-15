@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Dummy organizational project for Visual Studio.
+    Surfaces frontend files in Solution Explorer without any build output.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Source files -->
+    <None Include="src\**\*.*" />
+
+    <!-- Config files -->
+    <None Include="package.json" />
+    <None Include="package-lock.json" Condition="Exists('package-lock.json')" />
+    <None Include="tsconfig.json" />
+    <None Include="tsconfig.app.json" />
+    <None Include="tsconfig.node.json" />
+    <None Include="vite.config.ts" />
+    <None Include="index.html" />
+  </ItemGroup>
+
+  <!-- Exclude node_modules and build output -->
+  <ItemGroup>
+    <None Remove="node_modules\**" />
+    <None Remove="dist\**" />
+  </ItemGroup>
+
+  <Target Name="SkipBuild" BeforeTargets="Build">
+    <Message Text="BW.Website.Frontend is a container project for frontend assets only; no build step." Importance="low" />
+  </Target>
+
+</Project>

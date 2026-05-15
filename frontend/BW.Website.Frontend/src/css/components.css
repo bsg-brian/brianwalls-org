@@ -1,0 +1,27 @@
+﻿/* Shell-level helpers that use Tailwind utilities via @apply */
+
+.app-shell
+{
+	@apply min-h-screen flex flex-col;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+.app-card
+{
+	@apply rounded-xl border bg-white shadow-sm;
+	border-color: var(--color-border);
+	background-color: var(--color-surface);
+}
+
+.app-text-muted
+{
+	color: var(--color-text-muted);
+}
+
+.app-brand-pill
+{
+	@apply inline-flex items-center justify-center rounded-xl font-semibold;
+	background-color: var(--color-brand);
+	color: white;
+}

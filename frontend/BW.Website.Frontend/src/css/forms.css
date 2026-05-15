@@ -1,0 +1,13 @@
+﻿.app-input
+{
+	@apply block w-full rounded-lg border px-3 py-2 text-sm outline-none transition;
+	border-color: var(--color-border);
+	background-color: var(--color-surface);
+	color: var(--color-text);
+}
+
+	.app-input:focus
+	{
+		@apply ring-2;
+		ring-color: var(--color-brand);
+	}

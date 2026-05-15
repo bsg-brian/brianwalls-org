@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BW.Website.WebUI</title>
+
+    @* @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+    {
+        <link rel="stylesheet" href="~/dist/assets/style.debug.css" asp-append-version="true" />
+        <script type="module" src="~/dist/main.debug.js" asp-append-version="true" ></script>
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/dist/assets/style.css" asp-append-version="true" />
+        <script type="module" src="~/dist/main.js" asp-append-version="true" ></script>
+    } *@
+
+    <link rel="stylesheet" href="~/dist/assets/style.css" asp-append-version="true" />
+    <script type="module" src="~/dist/main.js" asp-append-version="true"></script>
+
+    @RenderSection("Head", required: false)
+
+</head>
+<body class="app-shell">
+    <header class="border-b bg-white/80 backdrop-blur" style="border-color: var(--color-border);">
+        <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="app-brand-pill h-8 w-8">
+                    SA
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold">BW.Website</span>
+                    <span class="text-xs app-text-muted">.NET 8 Web Template</span>
+                </div>
+            </div>
+
+            @await Html.PartialAsync("_MainNav")
+
+            <button id="theme-toggle"
+                    type="button"
+                    class="ml-4 inline-flex items-center gap-1 rounded-lg border px-3 py-1.5 text-xs"
+                    style="border-color: var(--color-border); color: var(--color-text);">
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <div class="mx-auto max-w-6xl px-4 py-6">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="border-t bg-white/60" style="border-color: var(--color-border);">
+        <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between text-xs app-text-muted">
+            <span>&copy; @DateTime.UtcNow.Year BW.Website</span>
+        </div>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        (function () {
+            const storageKey = "sampleapp-theme";
+            const root = document.documentElement;
+            const button = document.getElementById("theme-toggle");
+            const label = button?.querySelector(".theme-toggle-label");
+
+            function applyTheme(theme) {
+                root.setAttribute("data-theme", theme);
+                if (label) {
+                    label.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+                }
+            }
+
+            const saved = window.localStorage.getItem(storageKey);
+            const initial = saved === "dark" || saved === "light" ? saved : "light";
+            applyTheme(initial);
+
+            if (button) {
+                button.addEventListener("click", function () {
+                    const current = root.getAttribute("data-theme") || "light";
+                    const next = current === "light" ? "dark" : "light";
+                    applyTheme(next);
+                    window.localStorage.setItem(storageKey, next);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

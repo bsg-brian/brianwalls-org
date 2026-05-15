@@ -1,0 +1,17 @@
+﻿@model IEnumerable<FluentValidation.Results.ValidationFailure>
+@{
+    ViewData["Title"] = "Validation Error";
+}
+
+<h2>Validation failed</h2>
+
+<ul>
+    @foreach (var error in Model)
+    {
+        <li><strong>@error.PropertyName:</strong> @error.ErrorMessage</li>
+    }
+</ul>
+
+<p class="text-sm text-gray-500">
+    Correlation ID: @ViewData["CorrelationId"]
+</p>

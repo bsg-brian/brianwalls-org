@@ -1,0 +1,11 @@
+﻿@model Exception
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h2>An error occurred</h2>
+<p>@Model.Message</p>
+
+<p class="text-sm text-gray-500">
+    Correlation ID: @ViewData["CorrelationId"]
+</p>

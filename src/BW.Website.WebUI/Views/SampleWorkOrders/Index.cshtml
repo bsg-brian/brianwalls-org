@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Sample Work Orders";
+
+    // Example props passed to the island
+    var propsJson = System.Text.Json.JsonSerializer.Serialize(new
+    {
+        listUrl = Url.Action("ListJson", "SampleWorkOrders"),
+        detailsBaseUrl = Url.Action("Details", "SampleWorkOrders")?.TrimEnd('/') ?? "/SampleWorkOrders/Details"
+    });
+}
+
+<div class="flex items-center justify-between">
+    <div>
+        <h1 class="text-2xl font-semibold">Sample Work Orders</h1>
+        <p class="mt-1 text-sm app-text-muted">MVC page hosting a Vue island for listing/search.</p>
+    </div>
+
+    <a asp-action="Create"
+       class="inline-flex items-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark">
+        Create Work Order
+    </a>
+</div>
+
+<div class="mt-6 app-card p-4">
+    <div data-vue-island="sample-work-orders"
+         data-vue-props='@Html.Raw(propsJson)'>
+    </div>
+</div>
+
+@section Scripts {
+}

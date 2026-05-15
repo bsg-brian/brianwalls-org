@@ -1,0 +1,34 @@
+﻿@model BW.Website.Application.Features.SampleWorkOrders.Models.SampleWorkOrderDto
+@{
+    ViewData["Title"] = "Work Order Details";
+}
+
+<div class="flex items-center justify-between">
+    <h1 class="text-2xl font-semibold">Work Order @Model.WorkOrderNumber</h1>
+
+    <div class="flex items-center gap-2">
+        <a asp-action="Edit" asp-route-id="@Model.Id"
+           class="rounded-lg border px-4 py-2 text-sm" style="border-color: var(--color-border);">
+            Edit
+        </a>
+
+        <form asp-action="Delete" asp-route-id="@Model.Id" method="post" class="inline">
+            @Html.AntiForgeryToken()
+            <button type="submit"
+                    class="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">
+                Delete
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="mt-6 app-card p-4 space-y-2">
+    <div><span class="font-medium">Customer:</span> @Model.CustomerName</div>
+    <div><span class="font-medium">Status:</span> @Model.Status</div>
+    <div><span class="font-medium">Created:</span> @Model.CreatedOnUtc.ToString("u")</div>
+    <div><span class="font-medium">Due:</span> @(Model.DueDateUtc?.ToString("u") ?? "—")</div>
+    <div class="pt-2">
+        <div class="font-medium">Description</div>
+        <div class="mt-1 app-text-muted whitespace-pre-wrap">@Model.Description</div>
+    </div>
+</div>
