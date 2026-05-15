@@ -400,6 +400,9 @@ CLAUDE.local.md
 ## Transpiled config (source is vite.config.ts)
 **/vite.config.js
 
+# Temporary AI docs
+docs/ai/temp/
+
 # SQLite database files (local development)
 src/BW.Website.WebUI/*.db
 src/BW.Website.WebUI/*.db-shm

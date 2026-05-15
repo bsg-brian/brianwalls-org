@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0921C708-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ai", "ai", "{C6CAB364-3097-4933-AAD1-456C362D5CC6}"
 	ProjectSection(SolutionItems) = preProject
+		docs\ai\CSSArchitectureGuide.md = docs\ai\CSSArchitectureGuide.md
 		docs\ai\WebProjectArchitecture.md = docs\ai\WebProjectArchitecture.md
 	EndProjectSection
 EndProject
