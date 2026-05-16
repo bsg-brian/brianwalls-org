@@ -1,25 +1,76 @@
-﻿/* Light theme (default) */
-:root
-{
-	/* brand */
-	--color-brand: #2563eb;
-	--color-brand-light: #60a5fa;
-	--color-brand-dark: #1d4ed8;
-	/* surfaces */
-	--color-bg: #f1f5f9; /* slate-100 */
-	--color-surface: #ffffff;
-	--color-border: #e2e8f0; /* slate-200 */
-	/* text */
-	--color-text: #0f172a; /* slate-900 */
-	--color-text-muted: #64748b; /* slate-500 */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tier 1 — Primitive Tokens
+   Raw palette values. Single source of truth. Never reference these directly
+   in HTML or component classes — use the Tier 2 alias tokens below.
+   Naming: --bsg-color-{hue}-{shade}
+───────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Dark backgrounds */
+  --bsg-color-dark-950: #0a0e09;
+  --bsg-color-dark-900: #121a14;
+  --bsg-color-dark-800: #16201a;
+
+  /* Emerald accent ramp */
+  --bsg-color-emerald-300: #6ee7b7;
+  --bsg-color-emerald-400: #34d399;
+  --bsg-color-emerald-500: #22c55e;
+
+  /* Amber accent */
+  --bsg-color-amber-400: #fbbf24;
+
+  /* Text ramp */
+  --bsg-color-text-50:  #eef6ee;
+  --bsg-color-text-100: #d8eade;
+  --bsg-color-text-200: #c7dccd;
+  --bsg-color-text-300: #dcf0e4;
+  --bsg-color-text-400: #ecf8f0;
+  --bsg-color-text-500: #a4bcaa;
+
+  /* Status pill */
+  --bsg-color-status-text: #bfffe0;
+
+  /* On-action (very dark) */
+  --bsg-color-ink-950: #020617;
+  --bsg-color-ink-900: #04160e;
+
+  /* Footer */
+  --bsg-color-footer-text: #8fad98;
+  --bsg-color-footer-link: #cff0dc;
 }
 
-	/* Dark theme */
-	:root[data-theme="dark"]
-	{
-		--color-bg: #020617; /* slate-950 */
-		--color-surface: #020617; /* or #0b1120 */
-		--color-border: #1e293b;
-		--color-text: #e5e7eb; /* slate-200 */
-		--color-text-muted: #9ca3af;
-	}
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tier 2 — Semantic Alias Tokens
+   Maps primitives to roles. Components only ever reference these aliases.
+   Naming: --bsg-alias-{category}-{role}
+───────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bsg-alias-bg-body:   var(--bsg-color-dark-950);
+  --bsg-alias-bg-panel:  var(--bsg-color-dark-900);
+  --bsg-alias-bg-panel2: var(--bsg-color-dark-800);
+
+  /* Text */
+  --bsg-alias-text-primary:     var(--bsg-color-text-50);
+  --bsg-alias-text-muted:       var(--bsg-color-text-500);
+  --bsg-alias-text-mid:         var(--bsg-color-text-200);
+  --bsg-alias-text-soft:        var(--bsg-color-text-100);
+  --bsg-alias-text-light:       var(--bsg-color-text-300);
+  --bsg-alias-text-bright:      var(--bsg-color-text-400);
+  --bsg-alias-text-on-action:   var(--bsg-color-ink-900);
+  --bsg-alias-text-time:        var(--bsg-color-emerald-300);
+  --bsg-alias-text-status-pill: var(--bsg-color-status-text);
+  --bsg-alias-text-footer:      var(--bsg-color-footer-text);
+  --bsg-alias-text-footer-link: var(--bsg-color-footer-link);
+
+  /* Accents */
+  --bsg-alias-accent-primary:   var(--bsg-color-emerald-400);
+  --bsg-alias-accent-secondary: var(--bsg-color-emerald-300);
+  --bsg-alias-accent-hot:       var(--bsg-color-amber-400);
+  --bsg-alias-accent-live:      var(--bsg-color-emerald-500);
+
+  /* Borders */
+  --bsg-alias-border-default: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --bsg-alias-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}

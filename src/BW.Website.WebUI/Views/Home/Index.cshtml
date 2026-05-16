@@ -1,35 +1,308 @@
-﻿@{
-    ViewData["Title"] = "Dashboard";
+@{
+    ViewData["Title"] = "Brian Walls | Senior Software Engineer & Systems Architect";
+    ViewData["Description"] = "Senior software engineer and systems architect with 30 years building scalable, customer-facing platforms across SaaS, logistics, and e-commerce — from architecture and development through infrastructure and production operations.";
 }
 
-<section class="space-y-4">
-    <div>
-        <h1 class="text-2xl font-semibold">Welcome to BW.Website</h1>
-        <p class="mt-1 text-sm app-text-muted">
-            This is a .NET MVC UI + Application + Infrastructure template with Tailwind 4 and Vue.js.
-        </p>
-    </div>
+<div class="site-shell">
 
-    <div class="grid gap-4 md:grid-cols-3">
-        <div class="app-card p-4">
-            <h2 class="text-sm font-semibold">Application Layer</h2>
-            <p class="mt-1 text-xs app-text-muted">
-                CQRS, MediatR, FluentValidation, AutoMapper, and the SampleWorkOrder feature handlers.
-            </p>
-        </div>
+    <header class="nav-wrap">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="Brian Walls home">
+                <span class="brand-mark">BW</span>
+                <span>
+                    <strong>Brian Walls</strong>
+                    <small>Software Engineer &amp; Architect</small>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="#strengths">Strengths</a>
+                <a href="#proof">Proof</a>
+                <a href="#experience">Experience</a>
+                <a href="#technical">Technical</a>
+                <a href="#education">Education</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-        <div class="app-card p-4">
-            <h2 class="text-sm font-semibold">Infrastructure</h2>
-            <p class="mt-1 text-xs app-text-muted">
-                EF Core (SQLite) with ApplicationDbContext and an EF-based SampleWorkOrder repository.
-            </p>
-        </div>
+    <main id="top">
 
-        <div class="app-card p-4">
-            <h2 class="text-sm font-semibold">Web UI</h2>
-            <p class="mt-1 text-xs app-text-muted">
-                MVC layout using MVC Razor Views, Tailwind 4, Vue.js islands.
-            </p>
+        <!-- Hero -->
+        <section class="hero container">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Architecture. Development. Infrastructure. Modern .NET. Applied AI.</p>
+                <h1>Software that ships, scales, and stays running in production.</h1>
+                <p class="hero-lead">Senior software engineer and systems architect with 30 years of experience designing and delivering scalable, customer-facing platforms across SaaS, logistics, and e-commerce.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary email-link" href="#contact" data-u="bwalls040971" data-d="hotmail.com">Start a Conversation</a>
+                    <a class="btn btn-secondary" href="https://www.linkedin.com/in/brian-walls" target="_blank" rel="noopener">View LinkedIn</a>
+                </div>
+                <div class="hero-stats" aria-label="Career statistics">
+                    <div><strong>30</strong><span>Years in software and infrastructure</span></div>
+                    <div><strong>60+ TB</strong><span>Clustered SQL Server environments operated</span></div>
+                    <div><strong>End-to-end</strong><span>Architecture through production ownership</span></div>
+                </div>
+            </div>
+
+            <aside class="hero-card reveal delay-1" aria-label="Positioning statement">
+                <div class="status-pill"><span></span> Built to last</div>
+                <h2>Engineered end to end.</h2>
+                <p>Full-lifecycle ownership for organizations modernizing legacy systems, building customer-facing platforms, or putting AI-assisted development and LLM integration to practical use.</p>
+                <div class="signal-grid">
+                    <span>Modern .NET</span>
+                    <span>Clean Architecture</span>
+                    <span>Web Platforms</span>
+                    <span>SQL Server at Scale</span>
+                    <span>Private Cloud &amp; CI/CD</span>
+                    <span>AI-Assisted Development</span>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Strengths -->
+        <section class="section container" id="strengths">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Core strengths</p>
+                <h2>Broad technical leadership across the full stack.</h2>
+            </div>
+            <div class="cards four">
+                <article class="card reveal">
+                    <h3>Development</h3>
+                    <p>C#, .NET, ASP.NET Core, MVC, Web API, SQL Server and T-SQL, EF Core and Dapper, REST, Vue.js, and modern CSS.</p>
+                </article>
+                <article class="card reveal delay-1">
+                    <h3>Architecture</h3>
+                    <p>Clean Architecture, CQRS, layered and service-oriented design, dependency injection, and enterprise authentication and identity.</p>
+                </article>
+                <article class="card reveal delay-2">
+                    <h3>Infrastructure</h3>
+                    <p>IIS, Windows and Ubuntu Server, VMware, SQL Server clusters and replication, SAN storage, load balancers, on-premise and Azure.</p>
+                </article>
+                <article class="card reveal delay-3">
+                    <h3>Applied AI</h3>
+                    <p>AI-assisted development workflows, prompt engineering, developer productivity automation, and LLM integration patterns.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Proof -->
+        <section class="proof-section" id="proof">
+            <div class="container split">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Selected impact</p>
+                    <h2>Built for platforms where reliability is the requirement.</h2>
+                    <p>From high-traffic e-commerce to freight and logistics visibility platforms, the work centers on delivering customer-facing systems that perform and endure.</p>
+                </div>
+                <div class="proof-list reveal delay-1">
+                    <div class="proof-item">
+                        <span>01</span>
+                        <p>Led architecture and hands-on delivery of customer-facing ASP.NET Core MVC and Web API platforms supporting high-availability logistics and e-commerce workflows.</p>
+                    </div>
+                    <div class="proof-item">
+                        <span>02</span>
+                        <p>Architected and operated large-scale clustered SQL Server environments exceeding 60 TB, ensuring high availability, performance, and scalability.</p>
+                    </div>
+                    <div class="proof-item">
+                        <span>03</span>
+                        <p>Introduced AI-assisted development workflows to improve engineering productivity, accelerate prototyping, and enhance code quality.</p>
+                    </div>
+                    <div class="proof-item">
+                        <span>04</span>
+                        <p>Delivered enterprise authentication systems with IdentityServer supporting multiple SSO providers — Active Directory, Entra ID, Okta, and PingAM.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section container" id="experience">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Experience</p>
+                <h2>A career across development, architecture, and production operations.</h2>
+                <p>Role scope, ownership, and execution detail.</p>
+            </div>
+            <div class="timeline">
+
+                <article class="timeline-item reveal">
+                    <div class="time">Jul 2011 &ndash; Present</div>
+                    <div class="role-card">
+                        <h3>Loop (formerly StrategIQ Commerce)</h3>
+                        <p class="role">Senior Systems Architect / Software Engineer &mdash; Enterprise Infrastructure</p>
+                        <p>Chicago, IL &mdash; Remote</p>
+                        <p><strong>Scope:</strong> Customer-facing platform architecture and delivery, modern application design, private cloud infrastructure, CI/CD, and AI-assisted development.</p>
+                        <ul>
+                            <li>Led architecture and hands-on delivery of customer-facing ASP.NET Core MVC and Web API platforms supporting high-availability logistics and e-commerce workflows.</li>
+                            <li>Designed and implemented modern application architectures leveraging Clean Architecture and CQRS patterns, enabling scalability, maintainability, and long-term adaptability.</li>
+                            <li>Introduced AI-assisted development workflows (Claude Code and Cursor) to improve engineering productivity, accelerate prototyping, and enhance code quality.</li>
+                            <li>Evaluated and explored integration of AI capabilities into enterprise systems, including automation opportunities, data enrichment, and improved user experiences.</li>
+                            <li>Designed and delivered a modern web platform combining ASP.NET MVC, REST APIs, Vue.js, and Tailwind CSS using a modular frontend architecture.</li>
+                            <li>Optimized data access strategies using Entity Framework / EF Core and Dapper for performance-critical scenarios.</li>
+                            <li>Modernized legacy systems (VB.NET to C# and beyond) with minimal disruption while improving maintainability and performance.</li>
+                            <li>Built and maintained on-premise Azure DevOps / TFS infrastructure, including CI/CD pipelines and build automation.</li>
+                            <li>Designed and supported multi-location private cloud environments with SQL Server replication and GEO load-balanced IIS web server farms.</li>
+                            <li>Developed customer-facing visibility platforms with embedded Azure Power BI dashboards, enabling secure, role-based access to operational and analytical insights.</li>
+                            <li>Designed and implemented enterprise authentication and authorization systems using IdentityServer, supporting multiple SSO providers (custom SQL stores, Active Directory, Entra ID, Okta, PingAM).</li>
+                            <li>Architected and operated large-scale clustered SQL Server environments (60+ TB), ensuring high availability, performance, and scalability.</li>
+                            <li>Acted as a bridge between development and infrastructure, ensuring systems were designed with operational visibility, resilience, and long-term sustainability.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="time">Apr 2022 &ndash; Mar 2023</div>
+                    <div class="role-card">
+                        <h3>Walls-Carey &amp; Associates</h3>
+                        <p class="role">Senior .NET Consultant</p>
+                        <p>Contract Engagement</p>
+                        <p><strong>Scope:</strong> Lead architect and developer on a customer-facing platform for a global freight and logistics organization, delivered end-to-end within a one-year engagement.</p>
+                        <ul>
+                            <li>Architected and implemented a customer visibility platform using ASP.NET MVC, Web APIs, Vue.js, and Tailwind CSS.</li>
+                            <li>Delivered features supporting shipment tracking, milestones, purchase order and invoice visibility, dashboards, and reporting.</li>
+                            <li>Designed a clean, maintainable architecture emphasizing performance, security, and extensibility.</li>
+                            <li>Delivered the system from initial design through production rollout within timeline and scope expectations.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="time">Aug 2009 &ndash; May 2011</div>
+                    <div class="role-card">
+                        <h3>TEKsystems / Ascendum Solutions</h3>
+                        <p class="role">Senior .NET Consultant</p>
+                        <p>Louisville, KY / Florence, KY</p>
+                        <ul>
+                            <li>Designed and delivered web and data solutions across supply chain and enterprise environments using ASP.NET, C#, and SQL Server.</li>
+                            <li>Contributed to large-scale SharePoint / MOSS implementations consolidating distributed marketing platforms.</li>
+                            <li>Provided technical leadership, development, and production support across multiple client engagements.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="time">Nov 2007 &ndash; Aug 2009</div>
+                    <div class="role-card">
+                        <h3>Arrowstream</h3>
+                        <p class="role">Senior Web Developer</p>
+                        <p>Chicago, IL</p>
+                        <ul>
+                            <li>Contributed to the modernization of a large logistics platform from classic ASP to a multi-tier ASP.NET / C# architecture.</li>
+                            <li>Improved scalability and maintainability through application-layer and data-access design enhancements.</li>
+                            <li>Designed and implemented EDI integrations using Microsoft BizTalk Server (ANSI X12 processing).</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="time">1996 &ndash; 2007</div>
+                    <div class="role-card">
+                        <h3>Earlier Experience</h3>
+                        <p class="role">SAVO Group &middot; Collections Etc. &middot; AIT Worldwide Logistics &middot; Standard Register (Uarco)</p>
+                        <p>Chicago / Northwest Suburbs, IL</p>
+                        <p><strong>Roles:</strong> Senior Web Developer &amp; Network Operations Manager; Senior Web Developer &amp; Internet Project Manager; Senior Internet Systems Engineer &amp; Network Manager; Web Engineer.</p>
+                        <ul>
+                            <li>Architected backend systems for high-traffic web applications, including distributed processing and dynamic document generation.</li>
+                            <li>Led modernization efforts from classic ASP and VB6 to ASP.NET and SQL Server platforms.</li>
+                            <li>Built and supported enterprise e-commerce and logistics systems handling millions of monthly interactions.</li>
+                            <li>Designed and managed the company data center (50+ Windows Servers, backups, VPN, and network).</li>
+                            <li>Managed the technology aspects of affiliate marketing and email campaign initiatives to grow web revenue through new customer acquisition and order-channel conversion.</li>
+                            <li>Participated in a Microsoft Rapid Deployment Program for Internet Explorer 5, developing an IE5-specific application for tracking sales, manufacturing, and customer service locations, and providing beta feedback through weekly status meetings with Microsoft.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Technical proficiencies -->
+        <section class="section container" id="technical">
+            <div class="tech-panel reveal">
+                <div>
+                    <p class="eyebrow">Technical proficiencies</p>
+                    <h2>The stack behind scalable, customer-facing platforms.</h2>
+                </div>
+                <div class="tag-cloud" aria-label="Technical proficiencies">
+                    <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>MVC</span><span>Web API</span>
+                    <span>SQL Server</span><span>T-SQL</span><span>Entity Framework / EF Core</span><span>Dapper</span>
+                    <span>RESTful APIs</span><span>JSON</span><span>Vue.js</span><span>Tailwind CSS</span>
+                    <span>Modern CSS</span><span>Clean Architecture</span><span>CQRS</span>
+                    <span>Dependency Injection</span><span>Service-Oriented Design</span><span>IdentityServer</span>
+                    <span>Entra ID</span><span>Auth0</span><span>SSO</span><span>IIS</span>
+                    <span>Windows Server</span><span>Nginx</span><span>Ubuntu Server</span><span>VMware</span>
+                    <span>SQL Server Clusters &amp; Replication</span><span>SAN Storage / Fiber</span>
+                    <span>Firewalls</span><span>Load Balancers</span><span>Azure</span>
+                    <span>Azure DevOps / TFS</span><span>CI/CD</span><span>Power BI</span>
+                    <span>BizTalk / EDI</span><span>AI-Assisted Development</span><span>Prompt Engineering</span>
+                    <span>LLM Integration</span><span>AI Agent Frameworks</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section container" id="education">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Education and certifications</p>
+                <h2>Formal foundation with continuous, self-directed depth.</h2>
+            </div>
+            <div class="cards four">
+                <article class="card reveal">
+                    <h3>Oakton Community College</h3>
+                    <p>Management Information Systems. Presidential Scholar Honors. Des Plaines, IL.</p>
+                </article>
+                <article class="card reveal delay-1">
+                    <h3>Microsoft</h3>
+                    <p>Microsoft Certified Professional &mdash; ASP.NET Application Development (C#).</p>
+                </article>
+                <article class="card reveal delay-2">
+                    <h3>Microsoft</h3>
+                    <p>Internet Explorer 5 Rapid Deployment Program. Early-adopter program developing an IE5-specific tracking application and providing beta feedback to Microsoft.</p>
+                </article>
+                <article class="card reveal delay-3">
+                    <h3>Continuous Learning</h3>
+                    <p>Ongoing self-directed learning in modern .NET, distributed systems, and practical AI integration within enterprise applications.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-card reveal">
+                <p class="eyebrow">Ready for serious engineering conversations</p>
+                <h2>Architecture, delivery, and operations &mdash; under one roof.</h2>
+                <p>For scalable customer-facing platforms, modern .NET architecture, legacy modernization, enterprise authentication, and practical AI integration within enterprise systems.</p>
+                <div class="hero-actions center">
+                    <a class="btn btn-primary email-link" href="#contact" data-u="bwalls040971" data-d="hotmail.com" aria-label="Email Brian Walls">
+                        <span class="email-shield" data-email="moc.liamtoh@179040sllawb"></span>
+                    </a>
+                    <a class="btn btn-secondary" href="https://www.linkedin.com/in/brianwallsorg" target="_blank" rel="noopener">LinkedIn Profile</a>
+                </div>
+            </div>
+
+            @* Contact form island — stub registered, will be wired in a future iteration *@
+            @* <div data-vue-island="contact"></div> *@
+        </section>
+
+    </main>
+
+    <footer class="site-footer container">
+        <div>
+            <p>Brian Walls &mdash; Software that ships, scales, and stays running. Engineered end to end.</p>
+            <p style="margin-top: 0;">&copy; 1996&ndash;<span id="year"></span></p>
         </div>
-    </div>
-</section>
+        <a href="#top">Back to top</a>
+    </footer>
+
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Assemble contact href at click time.
+        document.querySelectorAll('.email-link').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.location.href = 'mail' + 'to:' + el.dataset.u + '\u0040' + el.dataset.d;
+            });
+        });
+    </script>
+}
